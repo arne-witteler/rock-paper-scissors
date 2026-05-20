@@ -6,6 +6,16 @@ function getComputerChoice() {
   } else if (random === 1) {
     return "paper";
   } else
-    return "scissor";
+    return "scissors";
 }
 
+function getHumanChoice() {
+  const validInput = ["rock", "paper", "scissors"];
+
+  let input = prompt("What do you choose?");
+
+  if (validInput.includes(input)) {
+    return input;
+  } else
+    return "Invalid Input"
+}
