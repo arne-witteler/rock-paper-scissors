@@ -5,8 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>Play this game in the browser console</h1>
+    <main class="game-container">
+      <section class="screen screen--start">
+        <h1 class="screen__title">RPS: 5 Rounds</h1>
+        <p class="screen__text">Best of five wins the game</p>
+        <button class="screen__button screen__button--primary">Start Game</button>
+      </section>
+
+      <section class="screen screen--game">
+        <div class="screen__header">
+          <p class="screen__rounds">Round 1 of 5</p>
+          <p class="screen__score">You: 0 | CPU: 0</p>
+        </div>
+        <div class="screen__battle-zone">
+          <div class="screen__player-choice">
+            <p class="screen__choice-label">Your Choice</p>
+            <img src="" alt="" class="screen__choice-image">
+          </div>
+          <div class="screen__computer-choice">
+            <p class="screen__choice-label">CPU Choice</p>
+            <img src="" alt="" class="screen__choice-image">
+          </div>
+        </div>
+
+        <div class="screen__buttons">
+          <button class="screen__button screen__button--choice">Rock <img src="" alt="" class="screen__button-icon"></button>
+          <button class="screen__button screen__button--choice">Paper <img src="" alt="" class="screen__button-icon"></button>
+          <button class="screen__button screen__button--choice">Scissors <img src="" alt="" class="screen__button-icon"></button>
+        </div>
+      </section>
+      <section class="screen screen--end">
+        <div class="screen__wrapper">
+          <h2 class="screen__title">Game Over!</h2>
+          <p class="screen__text">You are the winner!</p>
+          <div class="screen__final-score-box">
+            <p class="screen__final-score-label">Final Score</p>
+            <p class="screen__final-score-value">You: 2 | CPU: 1</p>
+          </div>
+          <button class="screen__button screen__button--primary">Play Again</button>
+          <button class="screen__button screen__button--secondary">Main Menu</button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
