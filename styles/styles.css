@@ -234,16 +234,19 @@ body {
   }
 
   .screen__button:hover {
-    transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   }
 
   .screen__button--primary:hover {
-    background-color: var(--color-grey);
+    background-color: var(--color-light-black);
   }
 
   .screen__button--secondary:hover {
-    background-color: var(--color-black);
-    color: var(--color-white);
+    background-color: var(--color-light-grey);
+  }
+
+  .screen__button--choice:hover {
+    background-color: var(--color-light-grey);
+    transform: translateY(-4px);
   }
 }
