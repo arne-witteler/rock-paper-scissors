@@ -1,0 +1,249 @@
+@import url(variables.css);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--font-family);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.game-container {
+  width: 100%;
+  padding: 24px;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.screen__image {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.screen__title {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.screen__text {
+  color: var(--color-grey);
+  margin-bottom: 32px;
+}
+
+.screen__button {
+  display: flex;
+  flex-direction: column-reverse;
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: bold;
+  padding: 16px 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.1s ease;
+}
+
+.screen__button:active {
+  transform: scale(0.98);
+}
+
+.screen__button--primary {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: none;
+}
+
+.screen__button--secondary {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 3px solid var(--color-black);
+  margin-top: 12px;
+}
+
+.screen__header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--color-black);
+  margin-bottom: 32px;
+}
+
+.screen__rounds, 
+.screen__score {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.screen__battle-zone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.screen__player-choice, 
+.screen__computer-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--color-black);
+  border-radius: 15px;
+  width: 47%;
+  height: 180px;
+  padding: 16px;
+}
+
+.screen__choice-label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.screen__choice-image {
+  max-width: 60px;
+  height: auto;
+}
+
+.screen__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: 100%;
+  align-items: center;
+}
+
+.screen__button--choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 3px solid var(--color-black);
+  flex: 1;
+  padding: 16px 0;
+}
+
+.screen__button-icon {
+  width: 48;
+  height: 48px;
+}
+
+.screen__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.screen__final-score-box {
+  margin: 24px 0 32px 0;
+  padding: 16px;
+  border: 3px solid var(--color-black);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.screen__final-score-label {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--color-grey);
+}
+
+.screen__final-score-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+@media (min-width: 768px) {
+  
+  .game-container {
+    max-width: 700px;
+    padding: 40px;
+  }
+
+  .screen__title {
+    font-size: 56px;
+  }
+
+  .screen__player-choice, 
+  .screen__computer-choice {
+    height: 240px;
+    padding: 24px;
+  }
+
+  .screen__choice-label {
+    font-size: 14px;
+  }
+
+  .screen__button--choice {
+    padding: 24px 0;
+    font-size: 20px;
+  }
+
+  .screen__button-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .game-container {
+    max-width: 850px;
+  }
+
+  .screen__title {
+    font-size: 72px;
+  }
+
+  .screen__player-choice, 
+  .screen__computer-choice {
+    height: 300px;
+  }
+
+  .screen__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .screen__button--primary:hover {
+    background-color: var(--color-grey);
+  }
+
+  .screen__button--secondary:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+}
