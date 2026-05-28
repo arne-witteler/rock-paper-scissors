@@ -103,6 +103,14 @@ function playRound(humanChoice, computerChoice) {
     playerChoiceImg.src = `assets/hand-${humanChoice}.svg`;
     computerChoiceImg.src = `assets/hand-${computerChoice}.svg`;
 
+    playerChoiceImg.classList.add("animate-shake");
+    computerChoiceImg.classList.add("animate-shake");
+
+    setTimeout(() => {
+      playerChoiceImg.classList.remove("animate-shake");
+      computerChoiceImg.classList.remove("animate-shake");
+    }, 400);
+
       if (humanChoice === "Invalid Input") {
         console.log("Invalid Input");
         return;
