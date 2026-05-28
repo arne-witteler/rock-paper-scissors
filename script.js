@@ -129,6 +129,10 @@ function playRound(humanChoice, computerChoice) {
     } else {
       endScreen.classList.remove("hidden");
       gameScreen.classList.add("hidden");
+      gameMessage.classList.add("visible");
+      gameMessage.textContent = "CHOOSE YOUR WEAPON"
+      playerChoiceImg.src = "";
+      computerChoiceImg.src = "";
       finalPlayerPoints.textContent = humanScore;
       finalComputerPoints.textContent = computerScore;
 

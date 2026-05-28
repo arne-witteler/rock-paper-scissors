@@ -37,6 +37,10 @@ body {
   display: none;
 }
 
+.visibile {
+  visibility: hidden;
+}
+
 .screen__image {
   width: 100px;
   margin-bottom: 10px;
@@ -90,7 +94,6 @@ body {
   justify-content: space-between;
   padding-bottom: 12px;
   border-bottom: 3px solid var(--color-black);
-  margin-bottom: 32px;
 }
 
 .screen__game {
@@ -107,9 +110,11 @@ body {
   color: var(--color-white);
   background-color: var(--color-black);
   padding: 20px 40px;
+  font-size: 18px;
+  font-weight: bold;
   border-radius: 15px;
-  position: absolute;
-  top: 150px;
+  width: max-content;
+  margin: 20px 0;
 }
 
 .screen__battle-zone {
